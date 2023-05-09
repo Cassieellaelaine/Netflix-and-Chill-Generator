@@ -11,7 +11,7 @@ function getApi() {
         .then(function (data) {
             for (var i = 0; i < data.length; i++) {
                 var cocktail = document.createElement('h4');
-                cocktail.textContent = data[i].html_url;
+                cocktail.textContent = data[i].text();
                 randomCocktail.appendChild(cocktail);
 
             }
