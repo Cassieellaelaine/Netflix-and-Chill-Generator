@@ -1,4 +1,7 @@
 
+body{
+  background-image: url("movie-night-ideas-1608824743.jpg");
+}
 .container {
     position: absolute;
     right: 150px;
