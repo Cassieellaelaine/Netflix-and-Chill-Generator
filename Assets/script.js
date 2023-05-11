@@ -1,9 +1,13 @@
 var specificGenreBtn = document.getElementsByClassName('dropdown-item');
 var randomCocktail = document.getElementById('randomcocktail');
+var comedyBtn = document.getElementById('comedyBtn');
+var dramaBtn = document.getElementById('dramaBtn');
+var sciFiBtn = document.getElementById('sciFiBtn');
+var romanceBtn = document.getElementById('romanceBtn');
 
 function getcocktailApi() {
     var requestUrl = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
-
+    console.log("clicked")
     fetch(requestUrl)
         .then(function (response) {
             return response.json();
@@ -20,21 +24,17 @@ function getcocktailApi() {
                 else { 
                    drinkIngredients.push(value) 
                 }
-                //console.log(data);
-                // var cocktail = document.createElement('h4');
-                // cocktail.textContent = data[i].text();
-                // randomCocktail.appendChild(cocktail);
-
             }
             console.log(drinkIngredients)
 
-            //'dropdown-item'.addEventListener("click",displayFunction);
-            //function displayFunction() {
-
-            //}
-
         })
-
+        //append or show drinkName drinkIngredients drinkInstructions
+        randomCocktail.appendChild(drinkName, drinkIngredients, drinkInstructions);
 }
 
 getcocktailApi();
+
+comedyBtn.addEventListener('click', getcocktailApi);
+dramaBtn.addEventListener('click', getcocktailApi);
+sciFiBtn.addEventListener('click', getcocktailApi);
+romanceBtn.addEventListener('click', getcocktailApi);
