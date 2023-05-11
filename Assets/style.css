@@ -1,9 +1,11 @@
 
-body{
-  background-image: url("movie-night-ideas-1608824743.jpg");
-  height: auto;
-  width: auto;
+html {
+  background: url(Images/Netflix_Chill_Image.PNG) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
 }
+
 .container {
     position: absolute;
     right: 150px;
@@ -13,7 +15,7 @@ body{
 }
 
 .button {
-    background-color: #3D5C7F;
+    background-color: grey;
     color: white;
     padding: 12px;
     font-size: 14px;
