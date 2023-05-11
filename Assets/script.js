@@ -11,7 +11,7 @@ function getcocktailApi() {
     fetch(requestUrl)
         .then(function (response) {
             return response.json();
-        
+
         })
         .then(function (data) {
             console.log(data.drinks[0])
@@ -19,20 +19,23 @@ function getcocktailApi() {
             var drinkInstructions = data.drinks[0].strInstructions
             var drinkIngredients = []
             for (var i = 1; i < 16; i++) {
-                var value = data.drinks[0]["strIngredient"+i]
-                if (value === null ){break}
-                else { 
-                   drinkIngredients.push(value) 
+                var value = data.drinks[0]["strIngredient" + i]
+                if (value === null) { break }
+                else {
+                    drinkIngredients.push(value)
                 }
             }
             console.log(drinkIngredients)
-
+            while(randomCocktail.firstChild){
+                randomCocktail.firstChild.remove()
+            }
+            randomCocktail.append(drinkName, drinkIngredients, drinkInstructions);
         })
-        //append or show drinkName drinkIngredients drinkInstructions
-        randomCocktail.appendChild(drinkName, drinkIngredients, drinkInstructions);
+    //append or show drinkName drinkIngredients drinkInstructions
+
 }
 
-getcocktailApi();
+//getcocktailApi();
 
 comedyBtn.addEventListener('click', getcocktailApi);
 dramaBtn.addEventListener('click', getcocktailApi);
