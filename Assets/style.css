@@ -26,7 +26,6 @@ html {
     font-family: 'Playfair Display', serif;
 }
 
-<<<<<<< HEAD
 .subtitle{
    position: absolute;
     right: 150px;
@@ -41,14 +40,10 @@ html {
 }
 
 
-=======
-
-
 #text-logo{
   font-family: 'Ysabeau', sans-serif;
 }
 
->>>>>>> ff6aa1dd9e1f138bef373b7c8bf8972cd52341e9
 #randomcocktail {
     position: absolute;
     bottom: 20px;
