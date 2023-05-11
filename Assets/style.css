@@ -1,4 +1,11 @@
 
+html {
+  background: url(Images/Netflix_Chill_Image.PNG) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
 .container {
     position: absolute;
     right: 150px;
@@ -8,7 +15,7 @@
 }
 
 .button {
-    background-color: #3D5C7F;
+    background-color: grey;
     color: white;
     padding: 12px;
     font-size: 14px;
