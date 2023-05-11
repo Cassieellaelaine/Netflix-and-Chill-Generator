@@ -22,9 +22,10 @@ body{
   border: 3px solid white
 }
 
-#logo{
-  height: auto;
-  max-width: 100%;
+
+
+#text-logo{
+  font-family: 'Ysabeau', sans-serif;
 }
 
 #randomcocktail {
