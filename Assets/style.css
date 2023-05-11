@@ -24,6 +24,12 @@ html {
   border: 3px solid white
 }
 
+
+
+#text-logo{
+  font-family: 'Ysabeau', sans-serif;
+}
+
 #randomcocktail {
   color: purple;
   padding: 15px;
