@@ -6,9 +6,63 @@ html {
   overflow: hidden;
 }
 
+.movies-container{
+  position: absolute;
+  top: 200;
+  left: 10px;
+  width: 200px;
+  height: 200px;
+  border: transparent;
+}
+
+.container1 {
+  position: absolute;
+  top: 200;
+  right: -160px;
+  width: 200px;
+  height: 200px;
+  border: transparent;
+}
+
+header{
+    margin: 0 auto;
+    width: 80%;
+    max-width: 650px;
+    position: relative;
+}
+
+
+h1{
+  font-size: 30pt;
+  margin-inline: 0;
+}
+
+h2 {
+  font-size: 15pt;
+  color: #000000;
+}
+
+h3{
+  font-size: 30pt;
+  color: black;
+  
+}
+
+p {
+  font-size: 15pt;
+    margin: 0;
+}
+
+
+header{
+  background: url("images/image-36.png");
+  max-height: 35vh;
+  background-size: cover;
+  display: flex;
+}
 .container {
     position: absolute;
-    right: 150px;
+    right: 200px;
     width: 200px;
     height: 120px;
 }
