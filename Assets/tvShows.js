@@ -1,65 +1,58 @@
 var showTitle = document.createElement("h6");
 var showRating = document.createElement("p");
 var showSynopsis = document.createElement("p")
-var comedyBtn = document.getElementById("comedyBtn")
-var dramaBtn = document.getElementById("dramaBtn")
-var sciFiBtn = document.getElementById("sciFiBtn")
-var romanceBtn = document.getElementById("comedyBtn")
 
 function getShowsApi(event) {
-    var requestUrl = 'https://api.tvmaze.com/shows';
+    
+    if (event.target.getAttribute('id') !== null) {
+        const genre = event.target.getAttribute('data-genre')
+        var requestUrl = `https://api.tvmaze.com/shows`;
+        fetch(requestUrl)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                // clear out the ul from previous appendagesgit checkout 
+                console.log(data)
+                const filteredData = data.filter(show => show.genres.includes(genre))
+                console.log(filteredData)
+                for (var i = 0; i < 4; i++) {
+                    const value = data[i]
+                    
+                    if (filteredData.includes(genre)) {
+                        console.log(filteredData)
+                        const h2 = document.createElement('h2')
+                        h2.innerHTML = value.name
 
-    const genre = event.target.getAttribute('data-genre')
-    fetch(requestUrl)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            // clear out the ul from previous appendagesgit checkout 
-            for (var i = 0; i < 4; i++) {
-                const value = data[i]
-                if (value.genres.includes(genre)) {
-                    console.log(value)
-                    // const showLi = document.createElement('li')
-                    const h2 = document.createElement('h2')
-                    h2.innerHTML = value.name
+                        const ratingPEl = document.createElement('p')
 
-                    const ratingPEl = document.createElement('p')
-                    // Pull random value from tv shows array
-
-                    // div.append(h2, ratingPEl, synopsisP)
-                    // or showLi.append(h2, ratingPEl, synopsisP)
-                    // ul.appendChild(showLi)
-                    showTitle.innerHTML = value.name
-                    showRating.innerHTML = value.rating.average
-                    showSynopsis.innerHTML = value.summary
+                        ratingPEl.innerHTML = value.rating.average
+                        // div.append(h2, ratingPEl, synopsisP)
+                        // or showLi.append(h2, ratingPEl, synopsisP)
+                        // ul.appendChild(showLi)
+                        const synopsisPEl = document.createElement("p")
+                        synopsisPEl.innerHTML = value.summary
+                    }
                 }
-            }
-
-        })
-
-    // Append ELs
+               
+                       
+            })
+        // getRandomValueFromArray(value);
+    };
 }
 
-getShowsApi();
-
- // Pull random value from tv shows array
- function getRandomValue(min, max) {
-    var randomValue=Math.random() // Random number between 0 and 0.99
-    var randomValueUpToMax=randomValue * max // Random number between 0 and max - 0.1
-    var randomValueInRange= min + randomValueUpToMax;
+// Pull random value from tv shows array
+function getRandomValue(min, max) {
+    var randomValue = Math.random() // Random number between 0 and 0.99
+    var randomValueUpToMax = randomValue * max // Random number between 0 and max - 0.1
+    var randomValueInRange = min + randomValueUpToMax;
 
     return Math.floor(randomValueInRange); // Remove the decimal places
- }
+}
 
- getRandomValueFromArray(value)
 function getRandomValueFromArray(array) {
-    var randomArrayPosition=getRandomValue(0,array.length);
+    var randomArrayPosition = getRandomValue(0, array.length);
     return array[randomArrayPosition];
 }
 
-// genreBtn.addEventListener('click', getShowsApi);
-comedyBtn.addEventListener('click', getShowsApi);
-dramaBtn.addEventListener('click', getShowsApi);
-sciFiBtn.addEventListener('click', getShowsApi);
-romanceBtn.addEventListener('click', getShowsApi);
+document.querySelector('.dropdown-content').addEventListener('click', getShowsApi);
