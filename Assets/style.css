@@ -1,6 +1,6 @@
 
 html {
-  background: url(Images/Netflix_Chill_Image.PNG) no-repeat center center fixed;
+  background: url(./Assets/Images/movie-night-ideas-1608824743.jpg) no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   overflow: hidden;
@@ -11,6 +11,22 @@ html {
     right: 150px;
     width: 200px;
     height: 120px;
+}
+
+body{
+  background: url(./movie-night-ideas-1608824743.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+#logo-box{
+  padding-top: 190px;
+  padding-left: 40px;
+}
+
+#text-logo{
+  padding-right: 100px;
 }
 
 .title{
@@ -40,8 +56,16 @@ html {
 }
 
 
-#text-logo{
-  font-family: 'Ysabeau', sans-serif;
+h1{
+  font-family: 'Bruno Ace SC', cursive;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Vina Sans', cursive;
+}
+
+#subtitle{
+  font-family: 'Bruno Ace SC', cursive;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Vina Sans', cursive;
 }
 
 #randomcocktail {

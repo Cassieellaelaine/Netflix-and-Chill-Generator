@@ -4,6 +4,7 @@ var comedyBtn = document.getElementById('comedyBtn');
 var dramaBtn = document.getElementById('dramaBtn');
 var sciFiBtn = document.getElementById('sciFiBtn');
 var romanceBtn = document.getElementById('romanceBtn');
+var menu = document.getElementById('menu');
 
 function getcocktailApi() {
     var requestUrl = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
@@ -35,9 +36,24 @@ function getcocktailApi() {
 
 }
 
+function onButtonClick(){
+    if(menu.style.display !== "none"){
+        menu.style.display = "none";
+
+    } else if(menu.style.display === "none"){
+        menu.style.display ==="flex";
+    }
+    
+}
+
 //getcocktailApi();
 
 comedyBtn.addEventListener('click', getcocktailApi);
 dramaBtn.addEventListener('click', getcocktailApi);
 sciFiBtn.addEventListener('click', getcocktailApi);
 romanceBtn.addEventListener('click', getcocktailApi);
+
+comedyBtn.addEventListener('click', onButtonClick);
+dramaBtn.addEventListener('click', onButtonClick);
+sciFiBtn.addEventListener('click', onButtonClick);
+romanceBtn.addEventListener('click', onButtonClick);
