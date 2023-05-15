@@ -45,6 +45,7 @@ html {
 }
 
 #randomcocktail {
+    display: flex;
     position: absolute;
     bottom: 20px;
     left: 40px;
@@ -54,6 +55,7 @@ html {
     border: 2px solid #000000;
     padding: 10px;
     border-radius: 5px;
+    flex-wrap: wrap;
   }
   
 
