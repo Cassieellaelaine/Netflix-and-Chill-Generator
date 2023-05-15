@@ -34,15 +34,15 @@ function getcocktailApi() {
                 randomCocktail.firstChild.remove()
             }
             randomCocktail.append(drinkName, drinkIngredients, drinkInstructions);
-            //append or show drinkName drinkIngredients drinkInstructions
-            //create function to display another random drink on button click
+
             $('#newcocktail').click(function getcocktailApi () {
     
                 randomCocktail.append(drinkName, drinkIngredients,drinkInstructions);
             
             })
+        })
+    //append or show drinkName drinkIngredients drinkInstructions
 
-})
 }
 
 function onButtonClick(){
@@ -57,10 +57,10 @@ function onButtonClick(){
 
 //getcocktailApi();
 
-comedyBtn.addEventListener('click', getcocktailApi);
-dramaBtn.addEventListener('click', getcocktailApi);
-sciFiBtn.addEventListener('click', getcocktailApi);
-romanceBtn.addEventListener('click', getcocktailApi);
+comedyBtn.addEventListener("click", getcocktailApi);
+dramaBtn.addEventListener("click", getcocktailApi);
+sciFiBtn.addEventListener("click", getcocktailApi);
+romanceBtn.addEventListener("click", getcocktailApi);
 
 comedyBtn.addEventListener('click', onButtonClick);
 dramaBtn.addEventListener('click', onButtonClick);
