@@ -52,3 +52,8 @@ comedyBtn.addEventListener('click', getcocktailApi);
 dramaBtn.addEventListener('click', getcocktailApi);
 sciFiBtn.addEventListener('click', getcocktailApi);
 romanceBtn.addEventListener('click', getcocktailApi);
+
+comedyBtn.addEventListener('click', onButtonClick);
+dramaBtn.addEventListener('click', onButtonClick);
+sciFiBtn.addEventListener('click', onButtonClick);
+romanceBtn.addEventListener('click', onButtonClick);
