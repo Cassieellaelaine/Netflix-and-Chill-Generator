@@ -2,86 +2,76 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Netflix & Chill Generator</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./Assets/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Netflix & Chill Generator</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="./Assets/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-</head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"/>
+  </head>
 
-<body class="img">
-    <section class="section">
-            <h1 class="title">
-                Netflix & Chill
-            </h1>
-            <p class="subtitle">
-                Find your favorite TV Shows paired with a nice drink recommendation.
-            </p>
-            <div class="corner-button">
-              <button class="button is-dark is-large">Watch List 🎬</button>
-            </div>
-            <div class="container is-flex is-justify-content-flex-end is-align-items-flex-start"> 
-
-            <div class="container">
-            <div class="dropdown is-right is-hoverable">
-                <div class="dropdown-trigger">
-                  <button class="button is-dark is-large" aria-haspopup="true" aria-controls="dropdown-menu">
-                    <span>⬇️ Select you Genre Below ⬇️</span>
-                    <span class="icon is-small">
-                      <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                  </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                  <div class="dropdown-content">
-                    <button id="comedyBtn" href="#" class="dropdown-item">
-                      Comedy
-                    </button>
-                    <button id="dramaBtn" class="dropdown-item">
-                      Drama
-                    </button>
-                    <button id="sciFiBtn" href="#" class="dropdown-item">
-                      Sci-Fi
-                    </button>
-                    <button id="romanceBtn" href="#" class="dropdown-item">
-                      Romance
-                    </button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-    </section>
-    
-    <section class="netflixlogo">
-      <div class="columns">
-        <div class="column is-half">
-          <div class="columns">
-            <div class="column is-8">
-              <figure class="image is-16by9">
-                <img id="logo"src="./Assets/Green Organic Warm Food and Restaurant Bio-Link Website.png" alt="TV-Logo">
-                
-              
-              </figure>
-
-            </div>
-            <div class="">
-            </div>
-          </div>
+  <body>
+    <div class="row block">
+        <div class="col">
+        <h3 class="pl-4 pt-4 has-text-white"> <a href="#">Watch List</a></h3>
         </div>
-        <div class="column">
-          Second column
+    </div>
+
+    <div class="row pt-4">
+        
+        <div id="logo-box" class="col-5 has-text-centered align-items-center">
+            <div class="row align-items-center justify-content-end">
+                <div class="col-6">
+                    <figure class="image ">
+                        <img id="logo"src="./Assets/Images/Green Organic Warm Food and Restaurant Bio-Link Website.png" alt="TV-Logo"> <p id="subtitle" class="has-text-white">Find your favorite TV Shows paired with a nice drink recommendation.</p></img>
+                    </figure>
+                </div>
+                <div id="text-logo"class="col-6 has-size-1"> <h1 class="has-text-centered has-text-white">Netflix & Chill</h1></div>
+
+            </div>
         </div>
-      </div>
-    </section>
-              </div>
-              <section id="randomcocktail">
-              </section>
 
-              <button id="refreshButton">Get another drink</button>
-              
-              <script src="./Assets/script.js"></script>
-              <script src="Assets/tvShows.js"></script>
-</body>
+        <div class="col-5 pr-4 box has-background-warning-light is-rounded">
 
+            <section id="menu">
+                <div class="row has-text-centered">
+                    <div class="col">
+                        <h1>Select Your Genre: </h1>
+                    </div>
+                </div>
+                <div class="row has-text-centered py-3">
+                    <div class="col">
+                        <button id="comedyBtn" class="button is-large is-rounded has-background-warning-light is-fullwidth">Comedy</button>
+                    </div>
+                </div>
+                <div class="row has-text-centered py-3">
+                    <div class="col">
+                        <button id="sciFiBtn" class="button is-large is-rounded has-background-warning-light is-fullwidth">Action</button>
+                    </div>
+                </div>
+                <div class="row has-text-centered py-3">
+                    <div class="col">
+                        <button id="dramaBtn" class="button is-large is-rounded has-background-warning-light is-fullwidth py-3">Drama</button>
+                    </div>
+                </div>
+                <div class="row has-text-centered py-3">
+                    <div class="col">
+                        <button id="romanceBtn" class="button is-large is-rounded has-background-warning-light is-fullwidth">Romance</button>
+                    </div>
+                </div>
+
+                <div class="row has-text-centered py-3">
+                    <div class="col">
+                        <button class="button is-large is-rounded has-background-warning-light is-fullwidth">About US</button>
+                    </div>
+                </div>
+
+            </section>
+            
+        </div>
+
+    </div>
+    <script src="./Assets/script.js"></script>
+    <script src="./Assets/tvShows.js"></script>
 </html>
