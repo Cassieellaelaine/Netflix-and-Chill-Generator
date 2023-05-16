@@ -1,6 +1,6 @@
 var specificGenreBtn = document.getElementsByClassName('dropdown-item');
 var randomCocktail = document.getElementById('randomcocktail');
-var drinkName = document.createElement('h7');
+var drinkName = document.createElement('h6');
 var drinkIngredients = document.createElement('p');
 var drinkInstructions = document.createElement('p');
 var comedyBtn = document.getElementById('comedyBtn');
@@ -21,28 +21,36 @@ function getcocktailApi() {
             console.log(data.drinks[0])
             drinkName.innerHTML = data.drinks[0].strDrink
             drinkInstructions.innerHTML = data.drinks[0].strInstructions
-            drinkIngredients.innerHTML = []
+            var ingredients = []
             for (var i = 1; i < 16; i++) {
                 var value = data.drinks[0]["strIngredient" + i]
                 if (value === null) { break }
                 else {
-                    drinkIngredients.push(value)
+                    ingredients.push(value)
                 }
             }
-            console.log(drinkIngredients)
+            drinkIngredients.textContent = ingredients.join(", ")
             while(randomCocktail.firstChild){
                 randomCocktail.firstChild.remove()
             }
-            randomCocktail.append(drinkName, drinkIngredients, drinkInstructions);
+            randomCocktail.style.display = "flex";
+            randomCocktail.style.display = "block";
 
-            $('#newcocktail').click(function getcocktailApi () {
-    
-                randomCocktail.append(drinkName, drinkIngredients,drinkInstructions);
-            
-            })
+
+            randomCocktail.append(drinkName);
+            randomCocktail.append(drinkIngredients);
+            randomCocktail.append(drinkInstructions);
+
+
         })
-    //append or show drinkName drinkIngredients drinkInstructions
-
+    
+    $('#refreshButton').click(function getcocktailApi () {
+    
+        randomCocktail.append(drinkName);
+        randomCocktail.append(drinkIngredients);
+        randomCocktail.append(drinkInstructions);
+    
+    })
 }
 
 function onButtonClick(){
