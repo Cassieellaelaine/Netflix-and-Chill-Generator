@@ -25,7 +25,7 @@ left: 10px;
 width: 200px;
 height: 200px;
 border: transparent;
-}
+} 
 
 .container1 {
 position: absolute;
@@ -34,7 +34,7 @@ right: -160px;
 width: 200px;
 height: 200px;
 border: transparent;
-}
+} 
 
 header{
 margin: 0 auto;
@@ -70,15 +70,14 @@ h1{
 
 h2 {
   font-size: 15pt;
-  color: white;
+  color: black;
 }
 
 h3{
   font-size: 30pt;
   padding-left: 100px;
   padding-right: 100px;
-  padding-bottom: 400px;
-  color: white; 
+  color: black; 
 }
 
 p {
@@ -92,11 +91,26 @@ p {
   font-family: 'Vina Sans', cursive;
 }
 
-
-
-  
-  
 #menu {
   height: 450px;
   overflow: scroll;
 }
+
+#drinkBox{
+  padding-left: 40px;
+  padding-top: 20px;
+  height: 150px;
+  overflow: scroll;
+}
+
+
+#container{
+  padding-left: 300px;
+}
+
+
+#watchListBtn{
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
