@@ -6,12 +6,43 @@ html {
   overflow: hidden;
 }
 
+
 .container {
-    position: absolute;
-    right: 150px;
-    width: 200px;
-    height: 120px;
+  position: absolute;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 400px;
+  right: 150px;
+  width: 200px;
+  height: 120px;
 }
+
+
+.movies-container{
+position: absolute;
+top: 200;
+left: 10px;
+width: 200px;
+height: 200px;
+border: transparent;
+}
+
+.container1 {
+position: absolute;
+top: 200;
+right: -160px;
+width: 200px;
+height: 200px;
+border: transparent;
+}
+
+header{
+margin: 0 auto;
+width: 80%;
+max-width: 650px;
+position: relative;
+}
+
 
 body{
   background: url(./movie-night-ideas-1608824743.jpg) no-repeat center center fixed;
@@ -29,37 +60,30 @@ body{
   padding-right: 100px;
 }
 
-.title{
-    position: absolute;
-    right: 150px;
-    left: 400px;
-    top: 250px;
-    width: 200px;
-    height: 120px;
-    font-size: 60px;
-    text-align: center;
-    color: white;
-    font-family: 'Playfair Display', serif;
-}
-
-.subtitle{
-   position: absolute;
-    right: 150px;
-    left: 300px;
-    top: 420px;
-    width: 200px;
-    height: 120px;
-    font-size: 20px;
-    text-align: center;
-    color: white;
-    font-family: 'Playfair Display', serif;
-}
-
 
 h1{
   font-family: 'Bruno Ace SC', cursive;
   font-family: 'Playfair Display', serif;
   font-family: 'Vina Sans', cursive;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 15pt;
+  color: white;
+}
+
+h3{
+  font-size: 30pt;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 400px;
+  color: white; 
+}
+
+p {
+  font-size: 15pt;
+    margin: 0;
 }
 
 #subtitle{
@@ -68,18 +92,11 @@ h1{
   font-family: 'Vina Sans', cursive;
 }
 
-#randomcocktail {
-    display: flex;
-    position: absolute;
-    bottom: 20px;
-    left: 40px;
-    width: 500px;
-    height: 200px;
-    background-color: whitesmoke;
-    border: 2px solid #000000;
-    padding: 10px;
-    border-radius: 5px;
-    flex-wrap: wrap;
-  }
-  
 
+
+  
+  
+#menu {
+  height: 450px;
+  overflow: scroll;
+}

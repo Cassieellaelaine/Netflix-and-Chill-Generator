@@ -14,7 +14,7 @@
   <body>
     <div class="row block">
         <div class="col">
-        <h3 class="pl-4 pt-4 has-text-white"> <a href="#">Watch List</a></h3>
+        <h3 class="pl-4 pt-4 has-text-white"><a href="index2.html"> Watch List </a></h3>
         </div>
     </div>
 
@@ -32,7 +32,7 @@
             </div>
         </div>
 
-        <div class="col-5 pr-4 box has-background-warning-light is-rounded">
+        <div class="col-4 pr-4 box has-background-warning-light is-rounded">
 
             <section id="menu">
                 <div class="row has-text-centered">
@@ -42,56 +42,45 @@
                 </div>
                 <div class="row has-text-centered py-3">
                     <div class="col">
-                        <button id="comedyBtn" class="button is-large is-rounded has-background-warning-light is-fullwidth">Comedy</button>
+                        <button data-genre="Comedy" id="comedyBtn" class="button is-large is-rounded has-background-warning-light is-fullwidth">Comedy</button>
                     </div>
                 </div>
                 <div class="row has-text-centered py-3">
                     <div class="col">
-                        <button id="sciFiBtn" class="button is-large is-rounded has-background-warning-light is-fullwidth">Action</button>
+                        <button data-genre="Science-Fiction" id="sciFiBtn" class="button is-large is-rounded has-background-warning-light is-fullwidth">Action</button>
                     </div>
                 </div>
                 <div class="row has-text-centered py-3">
                     <div class="col">
-                        <button id="dramaBtn" class="button is-large is-rounded has-background-warning-light is-fullwidth py-3">Drama</button>
+                        <button data-genre="Drama" id="dramaBtn" class="button is-large is-rounded has-background-warning-light is-fullwidth py-3">Drama</button>
                     </div>
                 </div>
                 <div class="row has-text-centered py-3">
                     <div class="col">
-                        <button id="romanceBtn" class="button is-large is-rounded has-background-warning-light is-fullwidth">Romance</button>
+                        <button data-genre="Romance" id="romanceBtn" class="button is-large is-rounded has-background-warning-light is-fullwidth">Romance</button>
                     </div>
                 </div>
 
-                <div class="row has-text-centered py-3">
-                    <div class="col">
-                        <button class="button is-large is-rounded has-background-warning-light is-fullwidth">About US</button>
-                    </div>
                 </div>
 
 
             </section>
 
-            <section class="butt">
-              <div class="row">
-                <div class="col">
-                  <div>
-                    <button id="refreshButton">Get another drink</button>
-                </div> 
-                </div>
-              </div>
-            </section>
-            
+        
+            </div>
         </div>
 
     </div>
+    <div class="row">
+        <div class="col-5 pr-4 box has-background-warning-light is-rounded">
 
-    <div class="row ">
-      <div class="col-5">
-        <section id="randomcocktail" class="box">
+    <section id="randomcocktail">
+    </section>
 
-        </section>
-      </div>
+    <div class="col-5">
+        <div class="row justify-content-center">
+        <button id="refreshButton" class="button is-medium is-rounded">Get another drink</button>
     </div>
-
     <script src="./Assets/script.js"></script>
     <script src="./Assets/tvShows.js"></script>
 </html>
