@@ -6,12 +6,6 @@ html {
   overflow: hidden;
 }
 
-.container {
-    position: absolute;
-    right: 150px;
-    width: 200px;
-    height: 120px;
-}
 
 body{
   background: url(./movie-night-ideas-1608824743.jpg) no-repeat center center fixed;
@@ -29,32 +23,6 @@ body{
   padding-right: 100px;
 }
 
-.title{
-    position: absolute;
-    right: 150px;
-    left: 400px;
-    top: 250px;
-    width: 200px;
-    height: 120px;
-    font-size: 60px;
-    text-align: center;
-    color: white;
-    font-family: 'Playfair Display', serif;
-}
-
-.subtitle{
-   position: absolute;
-    right: 150px;
-    left: 300px;
-    top: 420px;
-    width: 200px;
-    height: 120px;
-    font-size: 20px;
-    text-align: center;
-    color: white;
-    font-family: 'Playfair Display', serif;
-}
-
 
 h1{
   font-family: 'Bruno Ace SC', cursive;
@@ -68,18 +36,8 @@ h1{
   font-family: 'Vina Sans', cursive;
 }
 
-#randomcocktail {
-    display: flex;
-    position: absolute;
-    bottom: 20px;
-    left: 40px;
-    width: 500px;
-    height: 200px;
-    background-color: whitesmoke;
-    border: 2px solid #000000;
-    padding: 10px;
-    border-radius: 5px;
-    flex-wrap: wrap;
-  }
+
+
+  
   
 
