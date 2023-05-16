@@ -41,15 +41,15 @@ function getcocktailApi() {
   //append or show drinkName drinkIngredients drinkInstructions
 }
 
-function onButtonClick(){
-    if(menu.style.display !== "none"){
-        menu.style.display = "none";
+// function onButtonClick(){
+//     if(menu.style.display !== "none"){
+//         menu.style.display = "none";
 
-    } else if(menu.style.display === "none"){
-        menu.style.display ==="flex";
-    }
+//     } else if(menu.style.display === "none"){
+//         menu.style.display ==="flex";
+//     }
     
-}
+// }
 
 //getcocktailApi();
 
