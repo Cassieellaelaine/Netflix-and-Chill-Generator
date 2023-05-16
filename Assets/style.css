@@ -92,9 +92,19 @@ p {
   font-family: 'Vina Sans', cursive;
 }
 
-
-
-  
+#randomcocktail {
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    width: 500px;
+    height: 200px;
+    background-color: whitesmoke;
+    border: 2px solid #000000;
+    padding: 10px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+  }
   
 #menu {
   height: 450px;
