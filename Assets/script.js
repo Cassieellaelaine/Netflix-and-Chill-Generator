@@ -84,6 +84,7 @@ function getcocktailApi() {
         })
 }
     getNewCocktail();
+    refreshButton.addEventListener('click', getNewCocktail)
 
  function onButtonClick(){
      if(menu.style.display !== "none"){
