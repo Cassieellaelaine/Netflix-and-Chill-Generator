@@ -43,27 +43,58 @@ function getcocktailApi() {
 
 
         })
+
+    }
+
+    getcocktailApi();
     
-    $('#refreshButton').click(function getcocktailApi () {
-    
-        randomCocktail.append(drinkName);
-        randomCocktail.append(drinkIngredients);
-        randomCocktail.append(drinkInstructions);
-    
-    })
+   function getNewCocktail() {
+    var requestUrl = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
+    console.log("clicked")
+    fetch(requestUrl)
+        .then(function (response) {
+            return response.json();
+
+        })
+        .then(function (data) {
+            console.log(data.drinks[0])
+            drinkName.innerHTML = data.drinks[0].strDrink
+            drinkInstructions.innerHTML = data.drinks[0].strInstructions
+            var ingredients = []
+            for (var i = 1; i < 16; i++) {
+                var value = data.drinks[0]["strIngredient" + i]
+                if (value === null) { break }
+                else {
+                    ingredients.push(value)
+                }
+            }
+            drinkIngredients.textContent = ingredients.join(", ")
+            while(randomCocktail.firstChild){
+                randomCocktail.firstChild.remove()
+            }
+            randomCocktail.style.display = "flex";
+            randomCocktail.style.display = "block";
+
+
+            randomCocktail.append(drinkName);
+            randomCocktail.append(drinkIngredients);
+            randomCocktail.append(drinkInstructions);
+
+
+        })
 }
+    getNewCocktail();
 
-// function onButtonClick(){
-//     if(menu.style.display !== "none"){
-//         menu.style.display = "none";
+ function onButtonClick(){
+     if(menu.style.display !== "none"){
+         menu.style.display = "none";
 
-//     } else if(menu.style.display === "none"){
-//         menu.style.display ==="flex";
-//     }
+     } else if(menu.style.display === "none"){
+         menu.style.display ==="flex";
+     }
     
-// }
+ }
 
-//getcocktailApi();
 
 comedyBtn.addEventListener("click", getcocktailApi);
 dramaBtn.addEventListener("click", getcocktailApi);
