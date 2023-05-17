@@ -53,11 +53,15 @@ body{
 
 #logo-box{
   padding-top: 190px;
-  padding-left: 40px;
 }
 
 #text-logo{
   padding-right: 100px;
+}
+
+#logo{
+  height: 200px;
+  width: 400px;
 }
 
 
@@ -75,7 +79,7 @@ h2 {
 
 h3{
   font-size: 30pt;
-  padding-left: 100px;
+  padding-left: 0px;
   padding-right: 100px;
   color: black; 
 }
@@ -106,7 +110,7 @@ p {
 
 
 #container{
-  padding-left: 300px;
+  padding-left: 140px;
 }
 
 
