@@ -4,13 +4,14 @@ var comedyBtn = document.getElementById("comedyBtn");
 var dramaBtn = document.getElementById("dramaBtn");
 var sciFiBtn = document.getElementById("sciFiBtn");
 var romanceBtn = document.getElementById("romanceBtn");
-var specificGenreBtn = document.getElementsByClassName('dropdown-item');
-var randomCocktail = document.getElementById('randomcocktail');
-var comedyBtn = document.getElementById('comedyBtn');
-var dramaBtn = document.getElementById('dramaBtn');
-var sciFiBtn = document.getElementById('sciFiBtn');
-var romanceBtn = document.getElementById('romanceBtn');
-var menu = document.getElementById('menu');
+var specificGenreBtn = document.getElementsByClassName("dropdown-item");
+var randomCocktail = document.getElementById("randomcocktail");
+var comedyBtn = document.getElementById("comedyBtn");
+var dramaBtn = document.getElementById("dramaBtn");
+var sciFiBtn = document.getElementById("sciFiBtn");
+var romanceBtn = document.getElementById("romanceBtn");
+var menu = document.getElementById("menu");
+var refreshButton = document.getElementById("refreshButton");
 
 function getcocktailApi() {
   var requestUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
@@ -36,7 +37,8 @@ function getcocktailApi() {
       while (randomCocktail.firstChild) {
         randomCocktail.firstChild.remove();
       }
-      randomCocktail.append(drinkName, drinkIngredients, drinkInstructions);
+
+      randomCocktail.append(drinkName, drinkIngridients, drinkInstructions);
     });
   //append or show drinkName drinkIngredients drinkInstructions
 }
@@ -48,7 +50,7 @@ function getcocktailApi() {
 //     } else if(menu.style.display === "none"){
 //         menu.style.display ==="flex";
 //     }
-    
+
 // }
 
 //getcocktailApi();
@@ -57,12 +59,12 @@ comedyBtn.addEventListener("click", getcocktailApi);
 dramaBtn.addEventListener("click", getcocktailApi);
 sciFiBtn.addEventListener("click", getcocktailApi);
 romanceBtn.addEventListener("click", getcocktailApi);
-comedyBtn.addEventListener('click', getcocktailApi);
-dramaBtn.addEventListener('click', getcocktailApi);
-sciFiBtn.addEventListener('click', getcocktailApi);
-romanceBtn.addEventListener('click', getcocktailApi);
+comedyBtn.addEventListener("click", getcocktailApi);
+dramaBtn.addEventListener("click", getcocktailApi);
+sciFiBtn.addEventListener("click", getcocktailApi);
+romanceBtn.addEventListener("click", getcocktailApi);
 
-comedyBtn.addEventListener('click', onButtonClick);
-dramaBtn.addEventListener('click', onButtonClick);
-sciFiBtn.addEventListener('click', onButtonClick);
-romanceBtn.addEventListener('click', onButtonClick);
+comedyBtn.addEventListener("click", onButtonClick);
+dramaBtn.addEventListener("click", onButtonClick);
+sciFiBtn.addEventListener("click", onButtonClick);
+romanceBtn.addEventListener("click", onButtonClick);

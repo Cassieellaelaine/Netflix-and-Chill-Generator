@@ -25,7 +25,7 @@ left: 10px;
 width: 200px;
 height: 200px;
 border: transparent;
-}
+} 
 
 .container1 {
 position: absolute;
@@ -34,7 +34,7 @@ right: -160px;
 width: 200px;
 height: 200px;
 border: transparent;
-}
+} 
 
 header{
 margin: 0 auto;
@@ -53,11 +53,15 @@ body{
 
 #logo-box{
   padding-top: 190px;
-  padding-left: 40px;
 }
 
 #text-logo{
   padding-right: 100px;
+}
+
+#logo{
+  height: 200px;
+  width: 400px;
 }
 
 
@@ -70,15 +74,14 @@ h1{
 
 h2 {
   font-size: 15pt;
-  color: white;
+  color: black;
 }
 
 h3{
   font-size: 30pt;
-  padding-left: 100px;
+  padding-left: 0px;
   padding-right: 100px;
-  padding-bottom: 400px;
-  color: white; 
+  color: black; 
 }
 
 p {
@@ -92,21 +95,27 @@ p {
   font-family: 'Vina Sans', cursive;
 }
 
-#randomcocktail {
-    display: flex;
-    position: absolute;
-    bottom: 20px;
-    left: 40px;
-    width: 500px;
-    height: 200px;
-    background-color: whitesmoke;
-    border: 2px solid #000000;
-    padding: 10px;
-    border-radius: 5px;
-    flex-wrap: wrap;
-  }
   
 #menu {
   height: 450px;
   overflow: scroll;
 }
+
+#drinkBox{
+  padding-left: 40px;
+  padding-top: 20px;
+  height: 150px;
+  overflow: scroll;
+}
+
+
+#container{
+  padding-left: 140px;
+}
+
+
+#watchListBtn{
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
