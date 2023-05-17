@@ -126,13 +126,13 @@ function getApi(event) {
           // Step 4 - save to local storage
         });
       }
-      var backBtn = document.createElement("button");
-      backBtn.innerText = "Back";
-      backBtn.style.display = "block";
-      backBtn.addEventListener("click", function () {
-        window.location.reload();
-      });
-      usersContainer.append(backBtn);
+    //   var backBtn = document.createElement("button");
+    //   backBtn.innerText = "Back";
+    //   backBtn.style.display = "block";
+    //   backBtn.addEventListener("click", function () {
+    //     window.location.reload();
+    //   });
+    //   usersContainer.append(backBtn);
     });
 }
 
@@ -148,10 +148,22 @@ function getRandomValueFromArray(array) {
   var randomArrayPosition = getRandomValue(0, array.length);
   return array[randomArrayPosition];
 }
-comedyBtn.addEventListener("click", getApi);
-dramaBtn.addEventListener("click", getApi);
-sciFiBtn.addEventListener("click", getApi);
-romanceBtn.addEventListener("click", getApi);
+comedyBtn.addEventListener("click", loadGenreShows);
+dramaBtn.addEventListener("click", loadGenreShows);
+sciFiBtn.addEventListener("click", loadGenreShows);
+romanceBtn.addEventListener("click", loadGenreShows);
+
+function loadGenreShows (event) {
+    getApi(event)
+    var newShowsBtn = document.createElement("button");
+  newShowsBtn.innerText = "New Shows";
+  newShowsBtn.style.display = "block";
+  newShowsBtn.addEventListener("click", getApi);
+  const genre = event.target.getAttribute("data-genre");
+  newShowsBtn.setAttribute("data-genre", genre);
+  document.getElementById('tvshow').append(newShowsBtn);
+  
+  }
 
 function removeAllChildren(parent) {
   while (parent.firstChild) {
