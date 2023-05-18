@@ -55,13 +55,18 @@ body{
   padding-top: 190px;
 }
 
+.image{
+  padding-left: 100px;
+}
+
 #text-logo{
   padding-right: 100px;
-  font-size: 90px;
+  position: relative;
 }
 
 #logo{
-  height: 200px;
+  position: relative;
+
 }
 
 
