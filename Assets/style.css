@@ -3,8 +3,13 @@ html {
   background: url(./Assets/Images/movie-night-ideas-1608824743.jpg) no-repeat center center fixed;
   background-size: cover;
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
+
+/* body{
+  overflow-y: auto;
+  max-height: fit-content;
+} */
 
 
  .container {
@@ -58,7 +63,7 @@ body{
   background-size: cover;
   margin: 0;
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #logo-box{
