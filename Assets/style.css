@@ -61,24 +61,10 @@ body{
   overflow: hidden;
 }
 
-#logo-box{
-  padding-top: 190px;
-}
-
-#text-logo{
-  padding-right: 100px;
-}
 
 #logo{
-  height: 200px;
-  width: 400px;
-}
-
-h1{
-  font-family: ‘Bruno Ace SC’, cursive;	
-  font-family: ‘Playfair Display’, serif;	
-  font-family: ‘Vina Sans’, cursive;	
-  font-weight: bold;
+  height: 500px;
+  width: 800px;
 }
 
 .head{
