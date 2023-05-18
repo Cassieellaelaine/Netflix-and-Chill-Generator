@@ -75,24 +75,43 @@ body{
 }
 
 h1{
+  font-family: ‘Bruno Ace SC’, cursive;	
+  font-family: ‘Playfair Display’, serif;	
+  font-family: ‘Vina Sans’, cursive;	
+  font-weight: bold;
+}
+
+.head{
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   color: white;
 }
 
 h2{
+  font-size: 15pt;	
+  color: black;
+}
+
+.no-data{
   font-size: 15pt;
   color: white;
   font-family: 'Playfair Display', serif;
 }
 
-h3{
+.search{
   font-size: 30pt;
   margin-top: 7px;
   padding-left: 100px;
   padding-right: 100px;
   color: white;
   font-family: 'Playfair Display', serif;
+}
+
+h3{
+  font-size: 30pt;	
+  padding-left: 0px;	
+  padding-right: 100px;	
+  color: black;
   }
 
 
