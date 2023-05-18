@@ -17,24 +17,33 @@ html {
   height: 120px;
 } 
 
+.list-group{  
+  border: transparent;
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
 
 .movies-container{
-position: absolute;
-top: 200;
-left: 10px;
-width: 200px;
-height: 200px;
-border: transparent;
-} 
+  position: absolute;
+  top: 200;
+  left: 10px;
+  width: 200px;
+  height: 200px;
+  border: transparent;
+  font-family: 'Playfair Display', serif;
+  color: white;
+}
 
-.container1 {
-position: absolute;
-top: 200;
-right: -160px;
-width: 200px;
-height: 200px;
-border: transparent;
-}  
+.container1{
+  position: absolute;
+  top: 200;
+  right: -160px;
+  width: 200px;
+  height: 200px;
+  border: transparent;
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
 
 header{
 margin: 0 auto;
@@ -47,50 +56,54 @@ position: relative;
 body{
   background: url(./movie-night-ideas-1608824743.jpg) no-repeat center center fixed;
   background-size: cover;
+  margin: 0;
   height: 100%;
   overflow: hidden;
 }
 
-#logo-box{
-  padding-top: 190px;
-}
-
-.image{
-  padding-left: 100px;
-}
-
-#text-logo{
-  padding-right: 100px;
-  position: relative;
-}
 
 #logo{
-  position: relative;
-
+  height: 500px;
+  width: 800px;
 }
 
-
-h1{
-  font-family: 'Bruno Ace SC', cursive;
+.head{
   font-family: 'Playfair Display', serif;
-  font-family: 'Vina Sans', cursive;
   font-weight: bold;
+  color: white;
 }
 
-h2 {
-  font-size: 15pt;
+h2{
+  font-size: 15pt;	
   color: black;
 }
 
-h3{
-  font-size: 30pt;
-  padding-left: 0px;
-  padding-right: 100px;
-  color: black; 
+.no-data{
+  font-size: 15pt;
+  color: white;
+  font-family: 'Playfair Display', serif;
 }
+
+.search{
+  font-size: 30pt;
+  margin-top: 7px;
+  padding-left: 100px;
+  padding-right: 100px;
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
+
+h3{
+  font-size: 30pt;	
+  padding-left: 0px;	
+  padding-right: 100px;	
+  color: black;
+  }
+
 
 p {
   font-size: 15pt;
+  font-family: 'Playfair Display', serif;
     margin: 0;
 }
 
