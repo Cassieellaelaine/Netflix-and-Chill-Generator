@@ -1,70 +1,8 @@
-// var showTitle = document.createElement("h6");
-// var showRating = document.createElement("p");
-// var showSynopsis = document.createElement("p")
 var comedyBtn = document.getElementById("comedyBtn");
 var dramaBtn = document.getElementById("dramaBtn");
 var sciFiBtn = document.getElementById("sciFiBtn");
 var romanceBtn = document.getElementById("romanceBtn");
 var backBtn = document.getElementById("goBackBtn");
-
-// function getShowsApi(event) {
-//     var requestUrl = 'https://api.tvmaze.com/shows';
-
-//     const genre = event.target.getAttribute('data-genre')
-//     fetch(requestUrl)
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (data) {
-//             // clear out the ul from previous appendagesgit checkout
-//             for (var i = 0; i < 4; i++) {
-//                 const value = data[i]
-//                 if (value.genres.includes(genre)) {
-//                     console.log(value)
-//                     // const showLi = document.createElement('li')
-//                     const h2 = document.createElement('h2')
-//                     h2.innerHTML = value.name
-
-//                     const ratingPEl = document.createElement('p')
-//                     // Pull random value from tv shows array
-
-//                     // div.append(h2, ratingPEl, synopsisP)
-//                     // or showLi.append(h2, ratingPEl, synopsisP)
-//                     // ul.appendChild(showLi)
-//                     showTitle.innerHTML = value.name
-//                     showRating.innerHTML = value.rating.average
-//                     showSynopsis.innerHTML = value.summary
-//                 }
-//             }
-
-//         })
-
-//     // Append ELs
-// }
-
-// getShowsApi();
-
-//  // Pull random value from tv shows array
-//  function getRandomValue(min, max) {
-//     var randomValue=Math.random() // Random number between 0 and 0.99
-//     var randomValueUpToMax=randomValue * max // Random number between 0 and max - 0.1
-//     var randomValueInRange= min + randomValueUpToMax;
-
-//     return Math.floor(randomValueInRange); // Remove the decimal places
-//  }
-
-//  getRandomValueFromArray(value)
-// function getRandomValueFromArray(array) {
-//     var randomArrayPosition=getRandomValue(0,array.length);
-//     return array[randomArrayPosition];
-// }
-
-// // genreBtn.addEventListener('click', getShowsApi);
-// comedyBtn.addEventListener('click', getShowsApi);
-// dramaBtn.addEventListener('click', getShowsApi);
-// sciFiBtn.addEventListener('click', getShowsApi);
-// romanceBtn.addEventListener('click', getShowsApi);
-
 var usersContainer = document.getElementById("menu");
 
 function getApi(event) {
@@ -114,7 +52,7 @@ function getApi(event) {
         watchlistLi.append(watchlistCheckBox);
         watchlistLi.append(watchlistCopy);
 
-        watchlistCheckBox.addEventListener("click", function () {
+        watchlistCheckBox.addEventListener("click", function() {
           console.log(
             randomShows.name,
             randomShows.rating.average,
@@ -124,16 +62,35 @@ function getApi(event) {
           // Step 2 - Update the object with the random shows data
           // Step 3 - Use JSON.stringfy to create a JSON object
           // Step 4 - save to local storage
+          var watchlistData = {
+            name: randomShows.name,
+            rating: randomShows.rating.average
+        };
+            // step 1 - get watchlist data from local storage
+            var storageData = JSON.parse(localStorage.getItem("watchlistData"));
+            // step 1.5 - if watchlist data array is null, create an empty array
+            if (!storageData) {
+                storageData = []
+            }
+            // step 2 - add new object to existing array from local storage(.push)
+            storageData.push(watchlistData);
+            // step 3 - save new array in local storage
+            localStorage.setItem("watchlistData", JSON.stringify(storageData));
+            // addShowToWatchlist();
         });
       }
-    //   var backBtn = document.createElement("button");
-    //   backBtn.innerText = "Back";
-    //   backBtn.style.display = "block";
-    //   backBtn.addEventListener("click", function () {
-    //     window.location.reload();
-    //   });
-    //   usersContainer.append(backBtn);
     });
+}
+
+function addShowToWatchlist() {
+var storageData = JSON.parse(localStorage.getItem("watchlistData"));
+let showName = document.createElement("li")
+let showRating = document.createElement("li")
+var WatchlistCointainer = document.querySelector(".list-group")
+showName.textContent = storageData.name
+showRating.textContent = storageData.rating.average
+WatchlistCointainer.append(showName);
+WatchlistCointainer.append(showRating);
 }
 
 function getRandomValue(min, max) {
